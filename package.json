@@ -1,0 +1,16 @@
+{
+  "name": "magento-2.3-workspace",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "gulp": "^4.0.0",
+    "gulp-rsync": "0.0.8",
+    "gulp-wait": "0.0.2"
+  }
+}
