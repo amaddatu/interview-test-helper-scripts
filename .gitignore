@@ -3,3 +3,4 @@ backup_*
 last_backup.txt
 web
 package-lock.json
+yarn.lock
