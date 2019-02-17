@@ -97,6 +97,9 @@ var rsyncWait2 = function(){
 }
 
 var vendorFolder = localWebRoot + '/app/code/Amaddatu';
+var destVendorFolder = vendorFolder;
+destVendorFolder = destVendorFolder.replace(/^[(../)]+|[(../)]+$/gm, '');
+destVendorFolder = '~/' + destVendorFolder;
 
 // will delete files
 var rsyncModuleFunction = function() { 
@@ -106,7 +109,7 @@ var rsyncModuleFunction = function() {
             .pipe(wait(3000))
             .pipe(rsync({
                 root: vendorFolder,
-                destination: '~/' + vendorFolder,
+                destination: destVendorFolder,
                 username: 'magento',
                 port: 6022,
                 hostname: 'localhost',
@@ -134,7 +137,7 @@ var rsyncModuleFunction2 = function() {
         .pipe(wait(1000))
         .pipe(rsync({
             root: vendorFolder,
-            destination: '~/' + vendorFolder,
+            destination: destVendorFolder,
             username: 'magento',
             port: 6022,
             hostname: 'localhost',
